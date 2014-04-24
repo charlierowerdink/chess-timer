@@ -1,0 +1,90 @@
+
+
+var Stopwatch = function(duration, elem, options) {
+
+  	var timer       = createTimer(),
+      offset,
+      clock,
+      interval,
+      minutes,
+      seconds;
+
+	// default options
+	options = options || {};
+	options.delay = options.delay || 1;
+
+	// initialize
+	reset();
+
+	// private functions
+	function createTimer() {
+		return document.createElement("span");
+	}
+
+  	function start() {
+    	if (!interval) {
+      		offset   = Date.now();
+      		interval = setInterval(update, options.delay);
+    	}
+  	}
+
+  	function stop() {
+    	if (interval) {
+      		clearInterval(interval);
+      	interval = null;
+    	}
+  	}
+
+  	function reset() {
+    	clock = duration;
+    	render();
+  	}
+
+  	function update() {
+    	clock -= delta();
+    	render();
+  	}
+
+  	function render() {
+    	elem.innerHTML = format(); 
+  	}
+
+  	function delta() {
+    	var now = Date.now(),
+        d   = now - offset;
+
+    	offset = now;
+    	return d;
+  	}
+
+  	function format(){
+  		var timeStr;
+  		with(Math){
+  			minutes = floor(clock/60000);
+  			seconds = floor((clock/1000)%60);	
+  		}
+  		if (seconds < 10) {
+  			timeStr = '' + minutes + ":" + "0" + '' + seconds;
+  		}
+  		else {
+  			timeStr = '' + minutes + ":" + '' + seconds;
+  		}
+  		return timeStr;
+  	}
+
+  	// public API
+  	this.start   = start;
+  	this.stop    = stop;
+  	this.reset   = reset;
+};
+
+
+
+
+
+
+
+
+
+
+
