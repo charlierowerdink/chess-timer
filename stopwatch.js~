@@ -2,7 +2,7 @@
 
 var Stopwatch = function(duration, elem, options) {
 
-  	var timer = createTimer(),
+  	var timer       = createTimer(),
       	offset,
       	clock,
       	interval,
@@ -41,20 +41,20 @@ var Stopwatch = function(duration, elem, options) {
   	}
 
   	function update() {
-    		clock -= delta();
-    		render();
+    	clock -= delta();
+    	render();
   	}
 
   	function render() {
-    		elem.innerHTML = format(); 
+    	elem.innerHTML = format(); 
   	}
 
   	function delta() {
-    		var now = Date.now(),
-        	d = now - offset;
+    	var now = Date.now(),
+        d   = now - offset;
 
-    		offset = now;
-    		return d;
+    	offset = now;
+    	return d;
   	}
 
   	function format(){
