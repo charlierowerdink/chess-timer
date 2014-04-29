@@ -3,11 +3,11 @@
 var Stopwatch = function(duration, elem, options) {
 
   	var timer       = createTimer(),
-      	offset,
-      	clock,
-      	interval,
-      	minutes,
-      	seconds;
+        offset,
+        clock,
+        interval,
+        minutes,
+        seconds;
 
 	// default options
 	options = options || {};
@@ -22,22 +22,22 @@ var Stopwatch = function(duration, elem, options) {
 	}
 
   	function start() {
-    		if (!interval) {
-      			offset = Date.now();
-      			interval = setInterval(update, options.delay);
-    		}
+    	if (!interval) {
+      		offset   = Date.now();
+      		interval = setInterval(update, options.delay);
+    	}
   	}
 
   	function stop() {
-    		if (interval) {
-      			clearInterval(interval);
-      		interval = null;
-    		}
+    	if (interval) {
+      		clearInterval(interval);
+      	interval = null;
+    	}
   	}
 
   	function reset() {
-    		clock = duration;
-    		render();
+    	clock = duration;
+    	render();
   	}
 
   	function update() {
@@ -51,7 +51,7 @@ var Stopwatch = function(duration, elem, options) {
 
   	function delta() {
     	var now = Date.now(),
-        d   = now - offset;
+        d = now - offset;
 
     	offset = now;
     	return d;

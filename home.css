@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: Rokkitt;
+  border-spacing: 0;
+}
+#enter-duration {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  top: 20%;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+body {
+  background-color: #f8463f;
+}
+.duration {
+  background-color: white;
+  color: #2e2e2e;
+  font-size: 30px;
+  border: 0;
+  padding: 20px;
+  width: 40%;
+  height: 40px;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-family: Roboto;
+  text-align: center;
+  display: table;
+}
+*:focus {
+  outline: 0;
+  background-color: #fff1ab;
+}
+#start {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 20%;
+  background-color: white;
+  border-radius: 69px;
+  right: 0;
+  left: 0;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+#start,
+#start table {
+  width: 138px;
+  height: 138px;
+}
+#body-fade-container {
+  opacity: 0;
+}
+td {
+  vertical-align: middle;
+}
+#black {
+  top: 0;
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0;
+  z-index: -1;
+}
+#white {
+  height: 20%;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  z-index: -1;
+}
+.pause {
+  height: 70px;
+  width: 240px;
+  background-color: white;
+  color: black;
+  font-size: 30px;
+}
+.check {
+  margin: 0 auto;
+  height: 104px;
+  width: 130px;
+  background-image: url(../Assets/check.png);
+}
+.top {
+  -moz-transform: scale(-1, -1);
+  -ms-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+  -webkit-transform: scale(-1, -1);
+  transform: scale(-1, -1);
+}
+#timer {
+  display: none;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  width: 240px;
+  text-align: center;
+}
+#timer table {
+  width: 100%;
+}
+#timer table .top {
+  opacity: 0;
+}
+#timer table .spacing {
+  height: 20px;
+}
+#timer table .bottom {
+  opacity: 0;
+}
+#timer table .time {
+  font-size: 80px;
+  color: white;
+}
+.countdown {
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+#get-ready {
+  font-size: 30px;
+}
+#three {
+  font-size: 80px;
+}
+#two {
+  font-size: 80px;
+}
+#one {
+  font-size: 80px;
+}
